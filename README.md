@@ -247,8 +247,5 @@ python manage.py mark_system_transactions [flags]
 🎓 BE Computer Engineering  
 🏫 Dr. D. Y. Patil College of Engineering and Innovation, Varale, Pune.
 
----
-
-## 🤝 Connect with Me
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/AayanM05)
 [![Email](https://img.shields.io/badge/Email%20Me-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aayanmulla7777@gmail.com)
