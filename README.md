@@ -1,8 +1,5 @@
 # ♻️ E-RECYCLO v2.0
 ### Next-Gen AI-Powered E-Waste Recycling & Logistics Ecosystem
-*Transforming electronic waste management through automated AI classification, double-layer OTP-secured logistics, and seamless Razorpay financial clearing.*
-
----
 
 [![Django](https://img.shields.io/badge/Django-4.2.7-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
