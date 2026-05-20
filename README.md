@@ -6,10 +6,7 @@
 
 [![Django](https://img.shields.io/badge/Django-4.2.7-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://supabase.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deploys-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![Razorpay](https://img.shields.io/badge/Razorpay-Gateway-02042B?style=for-the-badge&logo=razorpay&logoColor=blue)](https://razorpay.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://github.com/beprojectdyp15/E-RECYCLO.v02.O/blob/main/LICENSE)
 
 ---
 
@@ -19,10 +16,9 @@
 
 Instead of letting old, hazardous electronics end up in standard landfills, E-RECYCLO provides a complete digital ecosystem where household users can upload their e-waste, certified vendors can purchase and recycle it, and collection agents can handle the door-to-door logistics securely. Every step of the recycling journey is fully tracked online—from automated image recognition when you upload a photo of your device, to OTP-secured handovers during pickup and delivery, and instant online payments via Razorpay.
 
-> **BE Capstone Project**  
-> 🎓 **Department of Computer Engineering (AI & Data Science)**  
-> 🏫 **Dr. D. Y. Patil College of Engineering and Innovation, Varale, Pune**  
-> 📅 **Academic Period:** Dec 2024 - May 2026
+> **BE Project**  
+> 🎓 **Department of Computer Engineering**  
+> 🏫 **Dr. D. Y. Patil College of Engineering and Innovation, Varale, Pune**
 
 ---
 
@@ -243,10 +239,7 @@ python manage.py mark_system_transactions [flags]
 ## 👨‍💻 Primary Developer
 
 **Aayan Mulla**  
-🎓 BE Computer Engineering (AI & Data Science)  
+🎓 BE Computer Engineering  
 🏫 Dr. D. Y. Patil College of Engineering and Innovation, Varale, Pune.
 
----
 
-## 📄 License
-This project is open-source and released under the [MIT License](https://github.com/beprojectdyp15/E-RECYCLO.v02.O/blob/main/LICENSE).
