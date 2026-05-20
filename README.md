@@ -15,9 +15,9 @@
 
 ## 🏗️ Project Overview
 
-**E-RECYCLO** is a comprehensive, production-grade **e-waste management platform** designed to solve the structural logistics, validation, and payout problems in modern electronic recycling. 
+**E-RECYCLO** is a user-friendly, full-stack online platform built to make electronic waste (e-waste) disposal and recycling simple, secure, and rewarding. 
 
-Built on a single-account multi-role custom authentication system, the platform orchestrates interactions between **Clients** (household recyclers), **Vendors** (certified recycling centers), **Collectors** (delivery agents), and **System Administrators**. It features automatic **AI-powered image classification**, **GPS-tracked pickup paths**, **dual-OTP transaction handshakes**, and a **fully automated financial layer** utilizing Razorpay Wallets and secure Admin Payouts.
+Instead of letting old, hazardous electronics end up in standard landfills, E-RECYCLO provides a complete digital ecosystem where household users can upload their e-waste, certified vendors can purchase and recycle it, and collection agents can handle the door-to-door logistics securely. Every step of the recycling journey is fully tracked online—from automated image recognition when you upload a photo of your device, to OTP-secured handovers during pickup and delivery, and instant online payments via Razorpay.
 
 > **BE Capstone Project**  
 > 🎓 **Department of Computer Engineering (AI & Data Science)**  
@@ -26,45 +26,30 @@ Built on a single-account multi-role custom authentication system, the platform 
 
 ---
 
-## 👥 Role-Based Architecture & Flow
+## 👥 How It Works (Role-Based Dashboards)
 
-The system runs on a highly secure, centralized `Account` model extending Django's `AbstractBaseUser` using **email** as the login identifier. Role control is managed by strict boolean flags:
+The platform connects four key groups of users, each having a custom-tailored online dashboard:
 
-```
-[Register Account] ──▶ [Email OTP verification (10m Expiry)] ──▶ [Active Session]
-                                                                        │
-    ┌───────────────────────────┬───────────────────────────────────────┤
-    ▼                           ▼                                       ▼
-[is_client]                [is_vendor]                            [is_collector]
-  - Immediate access         - Blocked until verified               - Blocked until verified
-  - E-waste uploads          - Complete GST/EPR profile             - Complete RC/License profile
-  - Wallet withdrawals       - Dynamic bid evaluations              - Real-time earnings panel
-```
+### 📱 Clients (Household Recyclers)
+*   **Simple Uploads:** Just upload a photo of your e-waste (like a broken phone, laptop, or charger) along with your pickup address.
+*   **Instant AI Estimation:** The platform automatically identifies the device category, estimates its condition, and calculates a fair pricing tier.
+*   **Eco Points & Wallet:** Earn cash directly in your online wallet when vendors accept your e-waste, or collect eco appreciation points for zero-value items to unlock green rank badges (from *Casual Recycler* up to *Eco Legend*).
+*   **Easy Payouts:** Withdraw your wallet balance directly to your bank account or UPI address at any time (minimum ₹50).
 
-### 📱 Client Portal
-- **Instant Access:** Fast, secure registration using email OTP verification (60-second cooldown, max 5 attempts lockout).
-- **AI PhotoPost Upload:** Upload electronic waste images with automated AI category matching, condition detection, confidence score calculation, and estimated market value tiering.
-- **Appreciation Gamification:** Accumulate `AppreciationPoints` on zero-value or carbon-saving items, unlocking ranks from *Casual Recycler* up to *Eco Legend*.
-- **Integrated Wallet ledger:** Accept vendor payout offers directly into an active client wallet, and request bank/UPI withdrawals (minimum ₹50).
+### 🏭 Certified Vendors (Recyclers)
+*   **Compliant Onboarding:** Register securely by uploading government-mandated documents (like GSTIN, PAN, and SPCB/CPCB e-waste authorization details) for admin verification.
+*   **Smart Pricing & Bids:** Review assigned e-waste posts, dispatch pickup agents, evaluate received devices, and submit final purchasing offers online.
+*   **Instant Wallet Top-Up:** Load funds securely using Razorpay (minimum ₹10) to cover e-waste purchases, processing, and transaction fees.
 
-### 🏭 Vendor Portal
-- **Strict Compliance Onboarding:** Requires 15 administrative and regulatory inputs including GSTIN, PAN, Aadhaar, Alternate Contacts, GPS location coordinates, and **E-Waste Authorization Documents** (SPCB, CPCB EPR, CTO, or Hazardous Waste ID).
-- **Interactive Inventory Management:** Monitor and accept assigned pickup posts, evaluate transit items in real time, review pricing tiers, and issue final recycling offers.
-- **Flexible Wallets:** Secure Razorpay checkout integration for instant wallet top-ups (minimum ₹10) to cover collector fees and transaction payments.
-- **Evaluation History Ledger:** Complete historical logs of all bid-reviews, pricing breakdowns, and condition assessments.
+### 🚴 Collectors (Logistics Partners)
+*   **Logistics Dashboard:** View nearby scheduled pickups, plan pickup dates, and track active trips on your map.
+*   **OTP-Secured Handshakes:** Safe and fraud-proof deliveries. You must verify a 6-digit OTP from the client at the doorstep to start the pickup, and enter another OTP from the vendor upon successful delivery to finish the trip.
+*   **Automated Earnings:** Receive automated fare settlements directly into your earnings wallet after each successful trip, calculated based on travel distance.
 
-### 🚴 Collector Logistics
-- **Authorized Courier Onboarding:** Requires vehicle details (Vehicle type, RC number, RC uploaded scan), Aadhaar documentation, Alternate Emergency contacts, and valid Driving License credentials.
-- **Double-Layer OTP Handshake:** Fraud-proof logistics path. Collector must verify a `pickup_otp` (obtained from the Client) at pickup, and a `delivery_otp` (obtained from the Vendor) at delivery to complete the trip.
-- **Automated Pricing Fees:** Collector earnings calculated using a robust distance-pricing model:
-  $$\text{Trip Earnings} = \text{Base Fare } (₹50) + [\text{Distance } (km) \times ₹5]$$
-- **Logistics History Tracker:** Tracks trip duration (`trip_start_at` to `completed_at`), active status, and real-time wallet settlement.
-
-### 🔐 Administrative Authority
-- **Central Compliance Center:** Verify, approve, or reject pending Vendor and Collector profiles (rejections require mandatory review comments and trigger automatic notification dispatches).
-- **Generic Dynamic CRUD System:** Complete model inspection interface offering robust search, filter, and pagination options, running on a dynamic `modelform_factory` for instant updates.
-- **Financial Clearing House:** Full control over pending wallet withdrawals, with automatic Razorpay Payout API integration on approval, or automated ledger refunds on rejection.
-- **Analytics Dashboard:** Graphical breakdowns of monthly upload volumes, role-based signup statistics, and total ecosystem transactions processed.
+### 🔐 Administrators (Control Panel)
+*   **Compliance Verification:** Review and approve pending vendor and collector profiles to maintain platform safety.
+*   **Financial Approvals:** Review and clear pending wallet withdrawal requests via secure payouts, or trigger automatic refunds on rejections.
+*   **Ecosystem Analytics:** Access visual charts showing monthly signup trends, e-waste upload volumes, and total processing values across the system.
 
 ---
 
