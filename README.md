@@ -6,6 +6,7 @@
 
 [![Django](https://img.shields.io/badge/Django-4.2.7-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Computer_Vision-FF6F00?style=for-the-badge&logo=ai&logoColor=white)](https://github.com/ultralytics/ultralytics)
 [![Razorpay](https://img.shields.io/badge/Razorpay-Gateway-02042B?style=for-the-badge&logo=razorpay&logoColor=blue)](https://razorpay.com/)
 
 ---
@@ -27,25 +28,29 @@ Instead of letting old, hazardous electronics end up in standard landfills, E-RE
 The platform connects four key groups of users, each having a custom-tailored online dashboard:
 
 ### 📱 Clients (Household Recyclers)
-*   **Simple Uploads:** Just upload a photo of your e-waste (like a broken phone, laptop, or charger) along with your pickup address.
-*   **Instant AI Estimation:** The platform automatically identifies the device category, estimates its condition, and calculates a fair pricing tier.
-*   **Eco Points & Wallet:** Earn cash directly in your online wallet when vendors accept your e-waste, or collect eco appreciation points for zero-value items to unlock green rank badges (from *Casual Recycler* up to *Eco Legend*).
-*   **Easy Payouts:** Withdraw your wallet balance directly to your bank account or UPI address at any time (minimum ₹50).
+Clients can easily upload photos of their old, unused electronics along with their pickup address to receive instant AI-powered valuations. Once a recycling vendor accepts their e-waste, clients receive secure cash payouts directly into their integrated wallet or earn green points.
 
 ### 🏭 Certified Vendors (Recyclers)
-*   **Compliant Onboarding:** Register securely by uploading government-mandated documents (like GSTIN, PAN, and SPCB/CPCB e-waste authorization details) for admin verification.
-*   **Smart Pricing & Bids:** Review assigned e-waste posts, dispatch pickup agents, evaluate received devices, and submit final purchasing offers online.
-*   **Instant Wallet Top-Up:** Load funds securely using Razorpay (minimum ₹10) to cover e-waste purchases, processing, and transaction fees.
+Certified vendors can securely register using compliance details to browse, purchase, and evaluate uploaded e-waste posts. They can load funds seamlessly via Razorpay to submit dynamic purchasing bids and manage their processing inventory online.
 
 ### 🚴 Collectors (Logistics Partners)
-*   **Logistics Dashboard:** View nearby scheduled pickups, plan pickup dates, and track active trips on your map.
-*   **OTP-Secured Handshakes:** Safe and fraud-proof deliveries. You must verify a 6-digit OTP from the client at the doorstep to start the pickup, and enter another OTP from the vendor upon successful delivery to finish the trip.
-*   **Automated Earnings:** Receive automated fare settlements directly into your earnings wallet after each successful trip, calculated based on travel distance.
+Collectors accept nearby scheduled trips, view delivery routes, and earn distance-based fees for transporting items. To prevent fraud, collectors complete trip transitions using a double-verification OTP handshake at both pickup and delivery.
 
 ### 🔐 Administrators (Control Panel)
-*   **Compliance Verification:** Review and approve pending vendor and collector profiles to maintain platform safety.
-*   **Financial Approvals:** Review and clear pending wallet withdrawal requests via secure payouts, or trigger automatic refunds on rejections.
-*   **Ecosystem Analytics:** Access visual charts showing monthly signup trends, e-waste upload volumes, and total processing values across the system.
+Administrators verify compliance files for vendors and collectors to maintain trust and safety across the ecosystem. They approve wallet withdrawals, resolve disputes, and access key platform metrics using a graphical analytics dashboard.
+
+---
+
+## 🛠️ Technology Stack
+
+| Component | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Backend Framework** | Django 4.2.7 (Python 3.10+) | Core platform logic, multi-role custom authentication, routing, and database ORM |
+| **AI & Computer Vision** | YOLOv8 (Ultralytics) | Automated electronic device image classification, confidence tiering, and pricing estimation |
+| **Payment Gateway** | Razorpay SDK | Sandbox wallet balance top-ups, collector trip payments, and administrator payouts |
+| **Database Layer** | PostgreSQL (Supabase / Local) | High-performance relational database for tracking users, posts, trips, and ledger entries |
+| **Styling & Frontend** | HTML5 / Vanilla CSS3 / JavaScript | Modern, premium responsive dashboards, custom card grid interfaces, and dynamic maps |
+| **Logistics Handshake** | Dual-OTP Validation | Secure transit handovers ensuring the agent only completes routes via client & vendor OTP inputs |
 
 ---
 
@@ -134,11 +139,11 @@ E-RECYCLO/
 
 #### 1. Clone the repository
 ```bash
-git clone https://github.com/beprojectdyp15/E-RECYCLO.v02.O.git
-cd E-RECYCLO
+git clone https://github.com/AayanM05/eRecyclo-E-waste-Recycling-and-Management-System.git
+cd eRecyclo-E-waste-Recycling-and-Management-System
 ```
 
-#### 2. Create and activate a Virtual Environment
+#### 2. Create and activate a Virtual Environment (`venv`)
 ```bash
 # Windows
 python -m venv venv
@@ -242,4 +247,8 @@ python manage.py mark_system_transactions [flags]
 🎓 BE Computer Engineering  
 🏫 Dr. D. Y. Patil College of Engineering and Innovation, Varale, Pune.
 
+---
 
+## 🤝 Connect with Me
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/AayanM05)
+[![Email](https://img.shields.io/badge/Email%20Me-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aayanmulla7777@gmail.com)
