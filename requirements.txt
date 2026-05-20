@@ -1,0 +1,67 @@
+# ============================================================
+# E-RECYCLO — Vercel Optimized (Core Platform Only)
+# ============================================================
+
+# -- Core Django --
+Django==4.2.7
+asgiref
+sqlparse
+
+# -- Django Extensions --
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+django-filter==23.5
+
+# -- Database --
+psycopg2-binary==2.9.9
+dj-database-url==2.1.0
+
+# -- Cloud Storage (Supabase) --
+django-storages[s3]==1.14.2
+boto3==1.34.14
+
+# -- Static Files --
+whitenoise==6.6.0
+
+# -- WSGI Server --
+gunicorn==21.2.0
+
+# -- Environment Configuration --
+python-decouple==3.8
+
+# -- Image Processing --
+Pillow==10.1.0
+
+# -- PDF Generation --
+reportlab==4.0.7
+
+# -- Password Hashing --
+argon2-cffi
+argon2-cffi-bindings
+
+# -- HTTP Requests --
+requests
+certifi
+charset-normalizer
+idna
+urllib3
+
+# -- Timezone & Utilities --
+pytz
+tzdata
+typing_extensions
+packaging
+six
+
+# -- Utilities --
+numpy==1.26.4
+
+# -- Payments --
+razorpay==2.0.1
+
+# -- AI/ML Packages (Bypass Vercel size limit) --
+# --extra-index-url https://download.pytorch.org/whl/cpu
+# torch==2.2.1+cpu
+# torchvision==0.17.1+cpu
+# ultralytics==8.1.0
+# opencv-python-headless==4.8.1.78
